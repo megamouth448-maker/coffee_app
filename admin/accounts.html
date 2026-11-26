@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quản lý tài khoản - Coffee App</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    th { background-color: #4CAF50; color: white; }
+    .form-group { margin-bottom: 15px; }
+    input, select, button { padding: 8px; margin-right: 5px; }
+  </style>
+</head>
+<body>
+
+  <h2>Quản lý tài khoản</h2>
+
+  <div class="form-group">
+    <input type="text" id="username" placeholder="Tên đăng nhập">
+    <input type="email" id="email" placeholder="Email">
+    <select id="role">
+      <option value="Nhân viên">Nhân viên</option>
+      <option value="Admin">Admin</option>
+      <option value="Khách hàng">Khách hàng</option>
+    </select>
+    <button onclick="addAccount()">Thêm tài khoản</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Tên đăng nhập</th>
+        <th>Email</th>
+        <th>Vai trò</th>
+        <th>Trạng thái</th>
+        <th>Hành động</th>
+      </tr>
+    </thead>
+    <tbody id="accountList"></tbody>
+  </table>
+
+  <script src="../js/accounts.js"></script>
+</body>
+</html>
